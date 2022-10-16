@@ -1,0 +1,18 @@
+<% layout('layouts/boilerplate')%>
+
+<h1>News from medical.net</h1>
+
+    <% for (let article of news){%>
+            <div class="card" mb-3>
+                <div class="row">
+                    <div class="col-md-4">
+                            <a class="btn btn-primary" href='<%= article.url %> '><%= article.tittle%></a>
+                    </div>
+                </div>
+            </div>
+    <% }%>
+
+
+<div>
+    <a class="btn btn-primary" href="/profile">Back to profile</a>
+</div>

@@ -1,0 +1,19 @@
+<% layout('layouts/boilerplate')%>
+
+<h1>Workouts</h1>
+
+    <% for (let video of videos){%>
+        <div class="row">
+            <div class="col-6">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <a class="btn btn-primary" href="https://www.youtube.com/watch?v=<%=video.id%>&list=PLDGRDRM479GufVoWrmOiu4_98BJpgX9rV&index=2" > <%= video.original_title%> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% }%>
+
+<div>
+    <a class="btn btn-primary" href="/profile">Back to profile</a>
+</div>

@@ -1,0 +1,37 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title"><%= user.username %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= user.role %></h6>
+      <a href="#" class="card-link"><%= user.email %></a>
+    </div>
+</div>
+
+<%  if( user.role === 'patient')  {%>
+    <h1>Records</h1>
+    <div class="card-body">
+        <a class="card-link btn btn-info" href="/records/index">Show Records</a>
+    </div>
+    <h1>Youtube</h1>
+    <div class="card-body">
+        <a class="card-link btn btn-info" href="/videos/video">Show videos</a>
+    </div>
+
+<%  } else if( user.role === 'physician')  {%>
+    <h3>Patient</h3>
+    <div class="card-body">
+        <a class="card-link btn btn-info" href="/patients/index">Show Patients</a>
+    </div>
+<% } else if( user.role === 'researcher') {%>
+    <h3>Patient</h3>
+    <div class="card-body">
+        <a class="card-link btn btn-info" href="/patients/index">Show Patients</a>
+    </div>
+    <h3>News</h3>
+    <div class="card-body">
+        <a class="card-link btn btn-info" href="/news/news">Show News</a>
+    </div>
+<% } %> 
+
+
