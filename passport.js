@@ -11,8 +11,8 @@ module.exports = function (passport) {
   passport.use(
     new GoogleStrategy(
       {
-        clientID: '451577522140-6csfupqdpstjs1kgh12doi7lu8ltb246.apps.googleusercontent.com',
-        clientSecret: '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',
+        clientID: '...',
+        clientSecret: '....',
         callbackURL: 'http://localhost:3000/auth/google/callback',
       },
       async (accessToken, refreshToken, profile, done) => {
@@ -44,8 +44,8 @@ module.exports = function (passport) {
   passport.use(
     new FacebookStrategy(
         {
-            clientID: '381435044052971',
-            clientSecret: '798a5384c9446e0fbad6e3aaac4797be',
+            clientID: '....',
+            clientSecret: '....',
             callbackURL: 'http://localhost:3000/auth/facebook/callback',
             profileFields: ['email', 'name']
         }, async (accessToken, refreshToken, profile, done) => {
@@ -73,8 +73,8 @@ module.exports = function (passport) {
     passport.use(
         new GitHubStrategy(
             {
-                clientID: '4b18e21dd9eaadf70d02',
-                clientSecret: 'e208872d9e5f17e9b85107f0b7084cb3721d289a',
+                clientID: '....',
+                clientSecret: '....',
                 callbackURL: 'http://localhost:3000/auth/github/callback',
                 scope: ['user:email']
             }, 
